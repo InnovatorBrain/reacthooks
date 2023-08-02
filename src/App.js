@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
+
 import './App.css';
+import ReducerHook from './components/ReducerHook';
+import UseEffectHook from './components/useEffectHook';
+import RefHook from './components/RefHook';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2 style={{ color: 'red', letterSpacing: '2px', fontFamily: 'cursive' }}>UseReducerHook</h2>
+      <ReducerHook />
+      <hr></hr>
+      <h2 style={{ color: 'red', letterSpacing: '2px', fontFamily: 'cursive' }}>UseEffectHook</h2>
+      <UseEffectHook />
+      <hr></hr>
+      <h2 style={{ color: 'red', letterSpacing: '2px', fontFamily: 'cursive' }}>RefHook</h2>
+      <RefHook />
+    </>
   );
 }
 
