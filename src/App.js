@@ -7,11 +7,19 @@ import RefHook from './components/RefHook';
 import LayoutEffect from './components/LayoutEffect';
 import ImperativeHandle from './components/ImperativeHook/ImperativeHandle';
 import ContextHook from './components/Context/ContextHook';
-
+// ContextHook Theme
+// import ThemeProvider from './components/ContextTheme/ThemeContext';
+// import ThemeSwitcher from './components/ContextTheme/ThemeSwitcher';
+// import Content from './components/ContextTheme/Content';
+// ContextHook Language
+import LanguageContext from './components/ContextHookLang/LanguageContext';
+import TextComponent from './components/ContextHookLang/TextComponent';
+const userLanguage = 'ger';
 
 
 function App() {
   return (
+
     <>
       <h2 style={{ color: 'red', letterSpacing: '2px', fontFamily: 'cursive' }}>UseReducerHook</h2>
       <ReducerHook />
@@ -24,12 +32,17 @@ function App() {
       <hr></hr>
       <h2 style={{ color: 'red', letterSpacing: '2px', fontFamily: 'cursive' }}>LayoutEffectHook</h2>
       <LayoutEffect />
+      <hr></hr>
       <h2 style={{ color: 'red', letterSpacing: '2px', fontFamily: 'cursive' }}>UseImperativeHook</h2>
       <ImperativeHandle />
       <h2 style={{ color: 'red', letterSpacing: '2px', fontFamily: 'cursive' }}>UseContextHook</h2>
       <ContextHook />
-    </>
-  );
-}
 
-export default App;
+      <h2 style={{ color: 'red', letterSpacing: '2px', fontFamily: 'cursive' }}>ContextHookLang</h2>
+      <LanguageContext.Provider value={userLanguage}>
+        <TextComponent />
+      </LanguageContext.Provider>
+    </>
+  )
+  }
+  export default App;
