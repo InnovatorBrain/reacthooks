@@ -1,8 +1,9 @@
+// Create and Provider
 import React, { createContext, useState } from 'react'
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({children}) => {
-  const [theme, setTheme] = useState('darkblue');
+  const [theme, setTheme] = useState('dark');
 
     return (
        <>
@@ -10,7 +11,7 @@ export const ThemeProvider = ({children}) => {
          {children}
        </ThemeContext.Provider>
        </>
-    )
+    ) 
 }
 
 export default ThemeContext;

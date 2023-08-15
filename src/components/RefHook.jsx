@@ -6,7 +6,7 @@ const RefHook = () => {
   const onClick = () => {
     // console.log(inputRef.current.value);
     inputRef.current.focus();
-    inputRef.current.value = "";
+    inputRef.current.value = "Most Welcome!";
   }
 
   return (
